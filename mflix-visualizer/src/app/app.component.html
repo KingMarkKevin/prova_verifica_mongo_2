@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<button class="btn btn-primary" (click)="load10Movies()">Carica 10 film</button>
+
+<div class="card-columns">
+  <div *ngFor="let movies of results" class="card">
+    <img class="card-img-top" [src]="photoURL(movie.poster)" alt="Movie poster">
+    <div class="card-body text-center">
+    <h4 class="card-title">{{movies.title}}</h4>
+    <p class="card-text">{{movies.fullplot}}</p>
+    </div>
+  </div>
+</div>
+<!--<div *ngFor="let movie of results">
+  <hr>
+  <h1>{{movie.title}}</h1>
+  <img [src]="photoURL(movie.poster)">
+  <p>{{movie.fullplot}}</p>
+</div>
